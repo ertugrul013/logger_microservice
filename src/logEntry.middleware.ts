@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 const Logs = new PrismaClient().logs;
 
 async function logEntryMiddleware(req: Request, res: Response, next: any) {
-  const { process } = req.body;
+  const { process, requestID } = req.body;
   const serverity = req.body.serverity || "info";
   const data = req.body.payload || "payload data not defined";
   await Logs.create({
@@ -12,6 +12,7 @@ async function logEntryMiddleware(req: Request, res: Response, next: any) {
       serverity: serverity,
       log: data,
       process: process,
+      requestID: requestID,
     },
   });
   next();

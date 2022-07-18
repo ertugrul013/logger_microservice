@@ -15,4 +15,5 @@ model Logs {
   serverity String
   log       Json
   process   String
+  requestID String
 }

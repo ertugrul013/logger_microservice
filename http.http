@@ -35,3 +35,6 @@ Content-Type: application/json
         "data": "dasdas"
     }
 }
+
+####
+GET {{BASE_URL}} HTTP/1.1

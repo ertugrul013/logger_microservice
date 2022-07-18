@@ -13,9 +13,19 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(rTracer.expressMiddleware());
 
-app.post("/", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     message: "service running",
+    endpoints: {
+      log: {
+        type: "POST",
+        body: {
+          serverity: "info || warning || error",
+          process: "at what stage of the application was this log created",
+          payload: "data of the logs",
+        },
+      },
+    },
   });
 });
 
