@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import rTracer from "cls-rtracer";
 import loggerMiddelware from "./src/logger.middleware";
+import logEntryMiddleware from "./src/logEntry.middleware";
 
 dotenv.config();
 
@@ -18,11 +19,15 @@ app.post("/", (req: Request, res: Response) => {
   });
 });
 
-app.post("/log", loggerMiddelware, (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "log recieved",
-  });
-});
+app.post(
+  "/log",
+  [loggerMiddelware, logEntryMiddleware],
+  (req: Request, res: Response) => {
+    res.status(200).json({
+      message: "log recieved",
+    });
+  }
+);
 
 app.listen(port, () => {
   console.log(`⚡️ [server]: Server is running on port ${port}`);

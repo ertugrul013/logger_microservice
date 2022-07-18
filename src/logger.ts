@@ -13,4 +13,6 @@ export const logger = Pino({
   mixin() {
     return { requestID: rTracer.id() };
   },
+  base: undefined, //remove pid and hostname
+  timestamp: Pino.stdTimeFunctions.isoTime,
 });

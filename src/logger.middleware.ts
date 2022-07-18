@@ -1,10 +1,9 @@
 import { Request, Response } from "express";
 import { logger } from "./logger";
 
-function loggerMiddelware(req: Request, res: Response, next: any) {
-  const process = req.body.process;
-
-  switch (req.body.serverity) {
+async function loggerMiddelware(req: Request, res: Response, next: any) {
+  const { serverity, process } = req.body;
+  switch (serverity) {
     case "info":
       logger.info(req.body, `Info log ${process}`);
       break;
