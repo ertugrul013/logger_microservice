@@ -12,7 +12,6 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(rTracer.expressMiddleware());
-
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     message: "service running",
@@ -33,6 +32,7 @@ app.post(
   "/log",
   [loggerMiddelware, logEntryMiddleware],
   (req: Request, res: Response) => {
+    console.log(req.requestID);
     res.status(200).json({
       message: "log recieved",
     });
