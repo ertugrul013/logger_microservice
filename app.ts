@@ -32,7 +32,6 @@ app.post(
   "/log",
   [loggerMiddelware, logEntryMiddleware],
   (req: Request, res: Response) => {
-    console.log(req.requestID);
     res.status(200).json({
       message: "log recieved",
     });
