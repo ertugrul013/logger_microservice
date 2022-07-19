@@ -3,7 +3,7 @@
 
 &#xa0;
 
-<a href="https://loggingmicroservice.netlify.app">Demo</a>
+<a href="https://eddie-logger.herokuapp.com/">Demo</a>
 
 </div>
 
