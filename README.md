@@ -9,22 +9,6 @@
 
 <h1 align="center">Logging Microservice</h1>
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ertugrul013/logging-microservice?color=56BEB8">
-
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/ertugrul013/logging-microservice?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ertugrul013/logging-microservice?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/ertugrul013/logging-microservice?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/ertugrul013/logging-microservice?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/ertugrul013/logging-microservice?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/ertugrul013/logging-microservice?color=56BEB8" /> -->
-</p>
-
 <!-- Status -->
 
  <h4 align="center"> 
@@ -45,22 +29,21 @@
 
 ## :dart: About
 
-Describe your project
+This project is a small microservice that handles keeping tracks of logging. This project was created to have the logging not have impact on the overal performance of ur application
 
 ## :sparkles: Features
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: fully build in typescript ;\
+:heavy_check_mark: Prisma ORM;\
+:heavy_check_mark: Docker support;
 
 ## :rocket: Technologies
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+- [Prisma](https://prisma.io/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
+- [Docker](https://Docker.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## :white_check_mark: Requirements
@@ -77,10 +60,10 @@ $ git clone https://github.com/ertugrul013/logging-microservice
 $ cd logging-microservice
 
 # Install dependencies
-$ yarn
+$ npm install
 
 # Run the project
-$ yarn start
+$ npm run dev
 
 # The server will initialize in the <http://localhost:3000>
 ```
